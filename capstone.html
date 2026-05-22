@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capstone Project — Ni Putu Divia Maharani</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom design tokens and base resets -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body data-page="capstone">
+
+  <!-- ============================================================
+       Navigation Bar (shared across all pages)
+       ============================================================ -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-slate-900 shadow-md">
+
+    <!-- Inner container: brand name + desktop links + hamburger -->
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+
+      <!-- Brand / home link -->
+      <a href="index.html" class="text-white font-bold text-lg tracking-tight">
+        Divia Maharani
+      </a>
+
+      <!-- Desktop navigation links (hidden on mobile, flex row on md+) -->
+      <ul id="nav-links" class="hidden md:flex gap-6 text-sm font-medium list-none m-0 p-0">
+        <li>
+          <a href="index.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="home">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+
+      <!-- Hamburger button (visible on mobile only, hidden on md+) -->
+      <button id="hamburger-btn"
+              class="md:hidden text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-amber-400"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <!-- Hamburger icon (three horizontal bars) -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor"
+             stroke-width="2"
+             aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div><!-- /inner container -->
+
+    <!-- Mobile dropdown menu (hidden by default; toggled by NavController.toggle()) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-4 pb-4">
+      <ul class="flex flex-col gap-3 text-sm font-medium list-none m-0 p-0 pt-2 border-t border-slate-700">
+        <li>
+          <a href="index.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="home">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+    </div><!-- /mobile-menu -->
+
+  </nav><!-- /#main-nav -->
+
+  <!-- ============================================================
+       Main content wrapper — pt-16 offsets the fixed nav height
+       ============================================================ -->
+  <main class="pt-16">
+
+    <!-- ============================================================
+         Page Header
+         ============================================================ -->
+    <section class="bg-slate-900 px-4 py-16 text-center">
+
+      <!-- Primary H1 heading — Requirement 8.1 -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
+        Planning of Water Pump System with Energy Sources of Solar Power Plant in Kampung Jalak Bali, Tengkudak Village, Penebel.
+      </h1>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-8 rounded-full"></div>
+
+      <!-- Framing badges — Requirement 8.2 -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="badge">Project Leadership</span>
+        <span class="badge">Teamwork</span>
+        <span class="badge">Sustainable Problem Solving</span>
+      </div>
+
+    </section><!-- /page header -->
+
+    <!-- ============================================================
+         STAR Method Cards — Requirement 8.3
+         2×2 grid on desktop, single column on mobile
+         ============================================================ -->
+    <section class="star-grid grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4 py-16">
+
+      <!-- Situation Card -->
+      <div class="star-card" data-star="situation">
+        <!-- Label badge -->
+        <span class="badge mb-4 inline-block">Situation</span>
+        <p class="text-slate-700 leading-relaxed">
+          Kampung Jalak Bali in Tengkudak Village relies on a PLN grid-powered water 
+          pump system to meet the clean water needs of 293 residents.
+          Full dependence on the grid creates high vulnerability to power outages, 
+          electricity tariff fluctuations, and continuously rising operational costs.
+        </p>
+      </div><!-- /situation -->
+
+      <!-- Task Card -->
+      <div class="star-card" data-star="task">
+        <!-- Label badge -->
+        <span class="badge mb-4 inline-block">Task</span>
+        <p class="text-slate-700 leading-relaxed">
+          To design a solar-powered water pumping system as an efficient, eco-friendly, 
+          and sustainable alternative energy source. To conduct a comprehensive technical 
+          feasibility study and compare the long-term economic viability between the proposed 
+          solar system (PATS) and the existing grid-powered system.
+        </p>
+      </div><!-- /task -->
+
+      <!-- Action Card -->
+      <div class="star-card" data-star="action">
+        <!-- Label badge -->
+        <span class="badge mb-4 inline-block">Action</span>
+        <p class="text-slate-700 leading-relaxed">
+          Analysed local solar radiation data using the Global Solar Atlas, 
+          identifying an average solar intensity of 4.7 kWh/m<sup>2</sup>/day at the target 
+          location. Planned a battery-less solar water pumping system using 
+          a submersible DC pump and an 1,800 Wp solar array capacity 4 x 450 Wp in a 
+          2S2P configuration. Calculated and compared financial 
+          performance indicators for both systems, utilizing key investment parameters: Net Present 
+          Value (NPV), Benefit-Cost Ratio (BCR), Internal Rate of Return (IRR), and Payback Period.
+        </p>
+      </div><!-- /action -->
+
+      <!-- Result Card -->
+      <div class="star-card" data-star="result">
+        <!-- Label badge -->
+        <span class="badge mb-4 inline-block">Result</span>
+        <p class="text-slate-700 leading-relaxed">
+          The finalized design successfully meets the community's demand with a daily water production 
+          capacity of &#x00B1 30m<sup>3</sup>/day, backed by a &#x00B1 53.9m<sup>3</sup> effective 
+          storage reservoir. Economic analysis proved the solar system is significantly superior, 
+          achieving an NPV of IDR 72,621,334.84 (at a 10% discount rate), an IRR of 14%, and lowering 
+          water costs to IDR 2,992.23/m<sup>3</sup> outperforming the existing grid system's metrics. 
+          The solar powered system demonstrated strong long-term economic resilience for the village 
+          through minimized operational expenses and a highly stable cash flow.
+        </p>
+      </div><!-- /result -->
+
+    </section><!-- /star-grid -->
+
+    <!-- ============================================================
+         Project Documentation Images — Requirement 8.4, 8.5
+         Placeholder images with modal-trigger class
+         ============================================================ -->
+    <section class="max-w-5xl mx-auto px-4 pb-16">
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">
+        Project Documentation
+      </h2>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-10 rounded-full"></div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <!-- cp diagram — modal trigger -->
+        <div class="modal-trigger cursor-pointer overflow-hidden rounded-lg"
+             data-src="cp diagram.png"
+             data-caption="Capstone Project — System Block Diagram">
+          <img src="cp diagram.png"
+               alt="Solar pump system site survey diagram"
+               class="w-full h-48 object-cover hover:scale-105 transition-transform duration-250" />
+        </div>
+
+        <!-- cp foto — modal trigger -->
+        <div class="modal-trigger cursor-pointer overflow-hidden rounded-lg"
+             data-src="cp foto.png"
+             data-caption="Capstone Project — Documentation Photo">
+          <img src="cp foto.png"
+               alt="Capstone project field documentation photo"
+               class="w-full h-48 object-cover hover:scale-105 transition-transform duration-250" />
+        </div>
+
+      </div><!-- /image grid -->
+
+    </section><!-- /project documentation -->
+
+  </main><!-- /main content wrapper -->
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="bg-slate-900 text-slate-400 text-center text-sm py-6 px-4">
+    <p>&copy; 2026 Ni Putu Divia Maharani. All rights reserved.</p>
+  </footer>
+
+  <!-- Main JavaScript (defer ensures DOM is ready) -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

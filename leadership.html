@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership &amp; Organization Experience — Ni Putu Divia Maharani</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom design tokens and base resets -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body data-page="leadership">
+
+  <!-- ============================================================
+       Navigation Bar (shared across all pages)
+       ============================================================ -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-slate-900 shadow-md">
+
+    <!-- Inner container: brand name + desktop links + hamburger -->
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+
+      <!-- Brand / home link -->
+      <a href="index.html" class="text-white font-bold text-lg tracking-tight">
+        Divia Maharani
+      </a>
+
+      <!-- Desktop navigation links (hidden on mobile, flex row on md+) -->
+      <ul id="nav-links" class="hidden md:flex gap-6 text-sm font-medium list-none m-0 p-0">
+        <li>
+          <a href="index.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="home">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+    </div><!-- /mobile-menu -->
+
+  </nav><!-- /#main-nav -->
+
+  <!-- ============================================================
+       Main content wrapper — pt-16 offsets the fixed nav height
+       ============================================================ -->
+  <main class="pt-16">
+
+    <!-- ============================================================
+         Page Header — Requirements 10.1, 10.2
+         ============================================================ -->
+    <section class="bg-slate-900 px-4 py-16 text-center">
+
+      <!-- Primary H1 heading — Requirement 10.1 -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
+        University Activities
+      </h1>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-8 rounded-full"></div>
+
+      <!-- Framing badges — Requirement 10.2 -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="badge">Project Management</span>
+        <span class="badge">Program Execution</span>
+        <span class="badge">Team Coordination</span>
+      </div>
+
+    </section><!-- /page header -->
+
+    <!-- ============================================================
+         Leadership Timeline — Requirements 10.3, 10.4, 10.5, 10.6
+         Vertical timeline with amber left-border and dot markers
+         ============================================================ -->
+    <section class="max-w-3xl mx-auto px-4 py-16">
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">
+        Roles &amp; Achievements
+      </h2>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-12 rounded-full"></div>
+
+      <!-- Timeline list — amber left-border line defined in styles.css (.timeline) -->
+      <ol class="timeline">
+
+        <!-- --------------------------------------------------------
+             Entry 1: Head of Project Division
+             -------------------------------------------------------- -->
+        <li class="timeline-entry">
+          <!-- Amber dot marker — positioned by styles.css (.timeline-dot) -->
+          <span class="timeline-dot" aria-hidden="true"></span>
+
+          <!-- Role title — Requirement 10.3 -->
+          <h3 class="role-title text-lg">Head of Administration Division</h3>
+
+          <!-- Organization name and date range — Requirement 10.3 -->
+          <p class="org-name">
+            Himpunan Mahasiswa Teknik Elektro Universitas Udayana &middot; Jan 2024 – Dec 2024
+          </p>
+
+          <!-- Achievement with quantifiable metric — Requirement 10.4 -->
+          <p class="achievement">
+            Processed and maintained comprehensive operational databases tracking single-item 
+            orders and multi-tiered bundle packages (Package 1, Package 2, and Full Package sets). 
+            <br> 
+            <br>Curated and cross-referenced size profiling parameters (ranging from XS to XXL) for over
+            80 apparel items to guarantee 100% distribution accuracy from external vendors to students.
+            <br> 
+            <br>Monitored payment transaction pathways by systematically auditing payment lifecycles, separating down payments (DP) from full liquidations (Lunas) via cash and bank transfers.
+          </p>
+        </li><!-- /entry 1 -->
+
+        <!-- --------------------------------------------------------
+             Entry 2: Event Coordinator
+             -------------------------------------------------------- -->
+        <li class="timeline-entry">
+          <span class="timeline-dot" aria-hidden="true"></span>
+
+          <h3 class="role-title text-lg">Secretary</h3>
+
+          <p class="org-name">
+            Universitas Udayana Bina Desa Program &middot; Aug 2024 – Dec 2024
+          </p>
+
+          <p class="achievement">
+            Served as the Team Secretary for the 2024 Bina Desa Elektro program in Penglatan Village,
+             Buleleng. Maintained rigorous administrative governance by drafting project proposals, 
+             taking meeting minutes, and compiling final reports. Systematically managed and audited 
+             the team's  logbook and attendance sheets, accurately tracking 142 distinct activity 
+             accumulating a total of 910 operational hours to ensure precise institutional accountability.
+          </p>
+        </li><!-- /entry 2 -->
+
+        <!-- --------------------------------------------------------
+             Entry 3: Team Leader — Community Service Program
+             -------------------------------------------------------- -->
+        <li class="timeline-entry">
+          <span class="timeline-dot" aria-hidden="true"></span>
+
+          <h3 class="role-title text-lg">Treasurer</h3>
+
+          <p class="org-name">
+            Kelompok Studi Roket PAKSI &middot; Jan 2025 – Dec 2025
+          </p>
+
+          <p class="achievement">
+            Overseeing and managing an allocated project and research budget starting at IDR 
+            8,100,000 for the PAKSI Rocket Study Group. 
+            Systematically recorded, categorized, and audited real-time expenditures for specialized 
+            engineering equipment (such as LiPo batteries, radio links, and carbon fiber materials). 
+            Maintained 100% balance accuracy across multi-month project timelines to prevent budget 
+            deficits and ensure smooth procurement processes.
+          </p>
+        </li><!-- /entry 3 -->
+
+        <!-- --------------------------------------------------------
+             Entry 4: Creative Director
+             -------------------------------------------------------- -->
+        <li class="timeline-entry">
+          <span class="timeline-dot" aria-hidden="true"></span>
+
+          <h3 class="role-title text-lg">Electrical Engineering Intern</h3>
+
+          <p class="org-name">
+            PT PLN (PERSERO) UIT JBM UPT Bali &middot; Jan 2025 – Feb 2025
+          </p>
+
+          <p class="achievement">
+            During my internship, I conducted routine equipment inspections and maintenance at 
+            the Substation. I monitored operational parameters to ensure system reliability and 
+            participated in technical discussions. Additionally, I assisted in community outreach 
+            regarding electrical grid safety.
+          </p>
+        </li><!-- /entry 4 -->
+
+      </ol><!-- /.timeline -->
+
+    </section><!-- /leadership timeline -->
+
+  </main><!-- /main content wrapper -->
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="bg-slate-900 text-slate-400 text-center text-sm py-6 px-4">
+    <p>&copy; 2026 Ni Putu Divia Maharani. All rights reserved.</p>
+  </footer>
+
+  <!-- Main JavaScript (defer ensures DOM is ready) -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

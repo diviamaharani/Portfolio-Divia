@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gift Initiatives — Ni Putu Divia Maharani</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom design tokens and base resets -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body data-page="gifts">
+
+  <!-- ============================================================
+       Navigation Bar (shared across all pages)
+       ============================================================ -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-slate-900 shadow-md">
+
+    <!-- Inner container: brand name + desktop links + hamburger -->
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+
+      <!-- Brand / home link -->
+      <a href="index.html" class="text-white font-bold text-lg tracking-tight">
+        Divia Maharani
+      </a>
+
+      <!-- Desktop navigation links (hidden on mobile, flex row on md+) -->
+      <ul id="nav-links" class="hidden md:flex gap-6 text-sm font-medium list-none m-0 p-0">
+        <li>
+          <a href="index.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="home">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+
+      <!-- Hamburger button (visible on mobile only, hidden on md+) -->
+      <button id="hamburger-btn"
+              class="md:hidden text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-amber-400"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <!-- Hamburger icon (three horizontal bars) -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor"
+             stroke-width="2"
+             aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div><!-- /inner container -->
+
+    <!-- Mobile dropdown menu (hidden by default; toggled by NavController.toggle()) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-4 pb-4">
+      <ul class="flex flex-col gap-3 text-sm font-medium list-none m-0 p-0 pt-2 border-t border-slate-700">
+        <li>
+          <a href="index.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="home">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+    </div><!-- /mobile-menu -->
+
+  </nav><!-- /#main-nav -->
+
+  <!-- ============================================================
+       Main content wrapper — pt-16 offsets the fixed nav height
+       ============================================================ -->
+  <main class="pt-16">
+
+    <!-- ============================================================
+         Page Header — Requirements 12.1, 12.2
+         ============================================================ -->
+    <section class="bg-slate-900 px-4 py-16 text-center">
+
+      <!-- Primary H1 heading — Requirement 12.1 -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
+        Creative Project: Customized Memorabilia
+      </h1>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-8 rounded-full"></div>
+
+      <!-- Framing badges — Requirement 12.2 -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="badge">Visual Communication</span>
+        <span class="badge">End-to-End Execution</span>
+        <span class="badge">Vendor &amp; Production Management</span>
+      </div>
+
+    </section><!-- /page header -->
+
+    <!-- ============================================================
+         Gift Showcase Grid — Requirement 12.3, 12.5, 12.6
+         3 columns on desktop, single column on mobile
+         ============================================================ -->
+    <section class="max-w-5xl mx-auto px-4 py-16">
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">
+        Gift Showcase
+      </h2>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-10 rounded-full"></div>
+
+      <!-- Gift cards grid: 1 col mobile → 3 cols desktop — Requirement 12.6 -->
+      <div class="gifts-grid grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Gift Card 1: Custom Pins -->
+        <article class="gift-card">
+          <div class="modal-trigger"
+               data-src="custom pins.HEIC"
+               data-caption="Custom Pins — Original designs produced end-to-end">
+            <img src="custom pins.png"
+                 alt="Custom pins — original pin designs"
+                 class="w-full h-48 object-cover rounded-t-lg" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-slate-900 mb-2">Custom Pins</h3>
+            <p class="text-sm text-slate-600">Designed original pin illustrations in Canva, coordinated with local vendor for production, and to share with 50+ friends.</p>
+          </div>
+        </article><!-- /gift-card 1 -->
+
+        <!-- Gift Card 2: Mini Gift 1 -->
+        <article class="gift-card">
+          <div class="modal-trigger"
+               data-src="mini gift 1.heic"
+               data-caption="Mini Gift Set 1 — Personalized handcrafted collection">
+            <img src="mini gifts.png"
+                 alt="Mini gift set 1 — personalized handcrafted items"
+                 class="w-full h-48 object-cover rounded-t-lg" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-slate-900 mb-2">Mini Gifts</h3>
+            <p class="text-sm text-slate-600">Created personalized mini gift with self-designed packaging.</p>
+          </div>
+        </article><!-- /gift-card 2 -->
+
+        <!-- Gift Card 3: Mini Gift 2 -->
+        <article class="gift-card">
+          <div class="modal-trigger"
+               data-src="mini gift 2.HEIC"
+               data-caption="Mini Gift Set 2 — Custom memorabilia batch">
+            <img src="banner.png"
+                 alt="Mini gift set 2 — custom memorabilia batch"
+                 class="w-full h-48 object-cover rounded-t-lg" />
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-slate-900 mb-2">Custom Banner</h3>
+            <p class="text-sm text-slate-600">Designed original visual layouts and typography themes for unofficial S.T. graduation banners via Canva.</p>
+          </div>
+        </article><!-- /gift-card 3 -->
+
+      </div><!-- /gifts-grid -->
+
+    </section><!-- /gift showcase -->
+
+    <!-- ============================================================
+         Process Step Cards — Requirement 12.4
+         4 columns on desktop, single column on mobile
+         ============================================================ -->
+    <section class="max-w-5xl mx-auto px-4 pb-16">
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">
+        Design &amp; Production Process
+      </h2>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-10 rounded-full"></div>
+
+      <!-- Process steps: 1 col mobile → 4 cols desktop -->
+      <section class="process-steps grid grid-cols-1 md:grid-cols-4 gap-4 mt-12">
+
+        <!-- Step 01: Ideation -->
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <h4 class="font-semibold text-slate-900 mb-2">Ideation</h4>
+          <p class="text-sm text-slate-600">Identify design concepts through research and mood boarding.</p>
+        </div><!-- /step 01 -->
+
+        <!-- Step 02: Canva Design -->
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <h4 class="font-semibold text-slate-900 mb-2">Canva Design</h4>
+          <p class="text-sm text-slate-600">Create digital mockups and final artwork using Canva Pro.</p>
+        </div><!-- /step 02 -->
+
+        <!-- Step 03: Vendor -->
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <h4 class="font-semibold text-slate-900 mb-2">Vendor</h4>
+          <p class="text-sm text-slate-600">Source and negotiate with local production vendors.</p>
+        </div><!-- /step 03 -->
+
+        <!-- Step 04: Production -->
+        <div class="step-card">
+          <span class="step-number">04</span>
+          <h4 class="font-semibold text-slate-900 mb-2">Production</h4>
+          <p class="text-sm text-slate-600">Oversee final production run and coordinate packaging.</p>
+        </div><!-- /step 04 -->
+
+      </section><!-- /process-steps -->
+
+    </section><!-- /process section -->
+
+  </main><!-- /main content wrapper -->
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="bg-slate-900 text-slate-400 text-center text-sm py-6 px-4">
+    <p>&copy; 2026 Ni Putu Divia Maharani. All rights reserved.</p>
+  </footer>
+
+  <!-- Main JavaScript (defer ensures DOM is ready) -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

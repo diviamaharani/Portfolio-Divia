@@ -1,0 +1,153 @@
+<!--
+  nav-snippet.html
+  ================
+  Shared navigation markup reference for the portfolio website.
+  Copy-paste this <nav> block into each of the six HTML pages.
+
+  Requirements: 4.1, 4.2, 4.3, 4.4, 4.5
+
+  Usage notes:
+  - Place this <nav> immediately after the opening <body> tag on every page.
+  - Set <body data-page="<identifier>"> on each page so NavController.setActive()
+    can highlight the correct link automatically.
+
+  Page identifiers:
+    index.html        → data-page="home"
+    capstone.html     → data-page="capstone"
+    electrical.html   → data-page="electrical"
+    leadership.html   → data-page="leadership"
+    creative.html     → data-page="creative"
+    gifts.html        → data-page="gifts"
+-->
+
+<!-- ============================================================
+     Navigation Bar
+     - Fixed to top of viewport (z-50, bg-slate-900)
+     - Desktop: horizontal link list (#nav-links), hidden on mobile
+     - Mobile: hamburger button (#hamburger-btn) + dropdown (#mobile-menu)
+     ============================================================ -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 bg-slate-900 shadow-md">
+
+  <!-- Inner container: brand name + desktop links + hamburger -->
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+
+    <!-- Brand / home link -->
+    <a href="index.html" class="text-white font-bold text-lg tracking-tight">
+      Divia Maharani
+    </a>
+
+    <!-- Desktop navigation links (hidden on mobile, flex row on md+) -->
+    <ul id="nav-links" class="hidden md:flex gap-6 text-sm font-medium list-none m-0 p-0">
+      <li>
+        <a href="index.html"
+           class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+           data-page="home">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="capstone.html"
+           class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+           data-page="capstone">
+          Capstone Project
+        </a>
+      </li>
+      <li>
+        <a href="electrical.html"
+           class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+           data-page="electrical">
+          Electrical Installation
+        </a>
+      </li>
+      <li>
+        <a href="leadership.html"
+           class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+           data-page="leadership">
+          Leadership
+        </a>
+      </li>
+      <li>
+        <a href="creative.html"
+           class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+           data-page="creative">
+          Creative Archive
+        </a>
+      </li>
+      <li>
+        <a href="gifts.html"
+           class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+           data-page="gifts">
+          Gift Initiatives
+        </a>
+      </li>
+    </ul>
+
+    <!-- Hamburger button (visible on mobile only, hidden on md+) -->
+    <button id="hamburger-btn"
+            class="md:hidden text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-amber-400"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+      <!-- Hamburger icon (three horizontal bars) -->
+      <svg xmlns="http://www.w3.org/2000/svg"
+           class="h-6 w-6"
+           fill="none"
+           viewBox="0 0 24 24"
+           stroke="currentColor"
+           stroke-width="2"
+           aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+  </div><!-- /inner container -->
+
+  <!-- Mobile dropdown menu (hidden by default; toggled by NavController.toggle()) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-4 pb-4">
+    <ul class="flex flex-col gap-3 text-sm font-medium list-none m-0 p-0 pt-2 border-t border-slate-700">
+      <li>
+        <a href="index.html"
+           class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+           data-page="home">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="capstone.html"
+           class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+           data-page="capstone">
+          Capstone Project
+        </a>
+      </li>
+      <li>
+        <a href="electrical.html"
+           class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+           data-page="electrical">
+          Electrical Installation
+        </a>
+      </li>
+      <li>
+        <a href="leadership.html"
+           class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+           data-page="leadership">
+          Leadership
+        </a>
+      </li>
+      <li>
+        <a href="creative.html"
+           class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+           data-page="creative">
+          Creative Archive
+        </a>
+      </li>
+      <li>
+        <a href="gifts.html"
+           class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+           data-page="gifts">
+          Gift Initiatives
+        </a>
+      </li>
+    </ul>
+  </div><!-- /mobile-menu -->
+
+</nav><!-- /#main-nav -->

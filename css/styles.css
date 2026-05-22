@@ -1,0 +1,413 @@
+/* =============================================================================
+   Portfolio Website — Ni Putu Divia Maharani
+   css/styles.css
+   Single stylesheet: CSS custom properties (design tokens) + base resets
+   Tailwind CSS is loaded via CDN in each HTML page.
+   ============================================================================= */
+
+/* -----------------------------------------------------------------------------
+   Section 1: Design Tokens (CSS Custom Properties)
+   ----------------------------------------------------------------------------- */
+:root {
+  /* Color palette */
+  --color-primary:    #1e3a5f;   /* deep professional blue */
+  --color-primary-lt: #2d5282;   /* lighter blue for hover states */
+  --color-accent:     #f59e0b;   /* warm amber */
+  --color-accent-alt: #fb923c;   /* coral variant */
+  --color-bg:         #f8fafc;   /* near-white background */
+  --color-text:       #1e293b;   /* slate-900 body text */
+  --color-text-muted: #64748b;   /* slate-500 secondary text */
+
+  /* Transition durations */
+  --transition-fast:  150ms ease-in-out;
+  --transition-base:  250ms ease-in-out;
+  --transition-slow:  300ms ease-in-out;
+
+  /* Box shadows */
+  --shadow-card:      0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-elevated:  0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* -----------------------------------------------------------------------------
+   Section 2: Base Resets
+   ----------------------------------------------------------------------------- */
+
+/* Box-sizing reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base body styles */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove list styles on ul/ol elements with a list role */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove default button styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Anchor reset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -----------------------------------------------------------------------------
+   Section 3: Navigation Active State
+   ----------------------------------------------------------------------------- */
+
+/* Active navigation link indicator */
+.nav-active {
+  color: var(--color-accent) !important;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* -----------------------------------------------------------------------------
+   Section 4: Interactive Element Transitions
+   ----------------------------------------------------------------------------- */
+
+/* Cards with hover effects */
+.card,
+.star-card,
+.gift-card,
+.timeline-entry,
+.gallery-cell,
+.step-card {
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover,
+.star-card:hover,
+.gift-card:hover,
+.step-card:hover {
+  box-shadow: var(--shadow-elevated);
+  transform: translateY(-2px);
+}
+
+.timeline-entry:hover {
+  box-shadow: var(--shadow-card);
+}
+
+/* Nav links */
+.nav-link {
+  transition: color var(--transition-fast);
+}
+
+/* Buttons */
+.btn,
+button.btn {
+  transition: background-color var(--transition-fast),
+              box-shadow var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+/* Modal overlay fade */
+#modal-overlay {
+  transition: opacity var(--transition-base);
+}
+
+/* Gallery caption overlay */
+.gallery-caption {
+  transition: opacity var(--transition-base);
+}
+
+/* -----------------------------------------------------------------------------
+   Section 5: Modal Lightbox
+   ----------------------------------------------------------------------------- */
+
+#modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.70);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-overlay.hidden {
+  display: none;
+}
+
+#modal-content {
+  position: relative;
+  max-width: 56rem;   /* ~896px */
+  max-height: 90vh;
+  margin: 0 1rem;
+}
+
+#modal-close {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  color: #ffffff;
+  font-size: 1.875rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+#modal-close:hover {
+  color: var(--color-accent);
+}
+
+#modal-img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow-elevated);
+}
+
+#modal-caption {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Section 6: Timeline (leadership.html)
+   ----------------------------------------------------------------------------- */
+
+.timeline {
+  position: relative;
+  border-left: 2px solid var(--color-accent);
+  margin-left: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-entry {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  transition: box-shadow var(--transition-base);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.5625rem; /* -9px */
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+.role-title {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.org-name {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.achievement {
+  margin-top: 0.5rem;
+  color: var(--color-text);
+}
+
+/* -----------------------------------------------------------------------------
+   Section 7: Gallery Grid (creative.html)
+   ----------------------------------------------------------------------------- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery-cell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.gallery-caption {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.50);
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  opacity: 0;
+}
+
+.gallery-cell:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* -----------------------------------------------------------------------------
+   Section 8: STAR Cards (capstone.html)
+   ----------------------------------------------------------------------------- */
+
+.star-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border-left: 4px solid var(--color-accent);
+}
+
+/* -----------------------------------------------------------------------------
+   Section 9: Gift Cards (gifts.html)
+   ----------------------------------------------------------------------------- */
+
+.gift-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.step-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.step-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* -----------------------------------------------------------------------------
+   Section 10: Load Table (electrical.html)
+   ----------------------------------------------------------------------------- */
+
+.load-table {
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.load-table th,
+.load-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.load-table th {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.load-table tbody tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* -----------------------------------------------------------------------------
+   Section 11: Utility Classes
+   ----------------------------------------------------------------------------- */
+
+/* Badge / framing label */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+/* Placeholder image container */
+.placeholder-img {
+  background-color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+}
+
+/* Modal trigger cursor */
+.modal-trigger {
+  cursor: pointer;
+}

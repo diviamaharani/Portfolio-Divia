@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electrical Installation — Ni Putu Divia Maharani</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom design tokens and base resets -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body data-page="electrical">
+
+  <!-- ============================================================
+       Navigation Bar (shared across all pages)
+       ============================================================ -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-slate-900 shadow-md">
+
+    <!-- Inner container: brand name + desktop links + hamburger -->
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+
+      <!-- Brand / home link -->
+      <a href="index.html" class="text-white font-bold text-lg tracking-tight">
+        Divia Maharani
+      </a>
+
+      <!-- Desktop navigation links (hidden on mobile, flex row on md+) -->
+      <ul id="nav-links" class="hidden md:flex gap-6 text-sm font-medium list-none m-0 p-0">
+        <li>
+          <a href="index.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="home">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+
+      <!-- Hamburger button (visible on mobile only, hidden on md+) -->
+      <button id="hamburger-btn"
+              class="md:hidden text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-amber-400"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <!-- Hamburger icon (three horizontal bars) -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor"
+             stroke-width="2"
+             aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div><!-- /inner container -->
+
+    <!-- Mobile dropdown menu (hidden by default; toggled by NavController.toggle()) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-4 pb-4">
+      <ul class="flex flex-col gap-3 text-sm font-medium list-none m-0 p-0 pt-2 border-t border-slate-700">
+        <li>
+          <a href="index.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="home">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+    </div><!-- /mobile-menu -->
+
+  </nav><!-- /#main-nav -->
+
+  <!-- ============================================================
+       Main content wrapper — pt-16 offsets the fixed nav height
+       ============================================================ -->
+  <main class="pt-16">
+
+    <!-- ============================================================
+         Page Header
+         ============================================================ -->
+    <section class="bg-slate-900 px-4 py-16 text-center">
+
+      <!-- Primary H1 heading — Requirement 9.1 -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
+        Technical Planning: 2-Story Residential Electrical &amp; Load Management
+      </h1>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-8 rounded-full"></div>
+
+      <!-- Framing badges — Requirement 9.2 -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="badge">Technical Calculations</span>
+        <span class="badge">Technical Risk Mitigation</span>
+        <span class="badge">Electrical Mapping</span>
+      </div>
+
+    </section><!-- /page header -->
+
+    <!-- ============================================================
+         Blueprint Images — Requirement 9.3, 9.5
+         Responsive grid with placeholder images and modal triggers
+         ============================================================ -->
+    <section class="max-w-5xl mx-auto px-4 py-16">
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">
+        Electrical Installation 
+      </h2>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-10 rounded-full"></div>
+
+      <!-- Responsive grid: 1 column on mobile, 2 columns on sm+ -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+        <!-- e wiring — modal trigger -->
+        <div class="modal-trigger cursor-pointer overflow-hidden rounded-lg"
+             data-src="e wiring.jpg"
+             data-caption="2-Story Residential Electrical — Wiring Diagram">
+          <img src="e wiring.jpg"
+               alt="2-story residential electrical wiring diagram"
+               class="w-full h-56 object-cover hover:scale-105 transition-transform duration-250" />
+        </div>
+
+        <!-- e installation — modal trigger -->
+        <div class="modal-trigger cursor-pointer overflow-hidden rounded-lg"
+             data-src="e installation.jpg"
+             data-caption="2-Story Residential Electrical — Installation Documentation">
+          <img src="e installation.jpg"
+               alt="2-story residential electrical installation documentation"
+               class="w-full h-56 object-cover hover:scale-105 transition-transform duration-250" />
+        </div>
+
+      </div><!-- /image grid -->
+
+    </section><!-- /blueprints -->
+
+    <!-- ============================================================
+         Load Grouping Table — Requirement 9.4, 9.6
+         MCB Groups 1–10 with circuit description, load (W), and notes
+         Wrapped in overflow-x-auto for horizontal scroll on narrow viewports
+         ============================================================ -->
+    <section class="max-w-5xl mx-auto px-4 pb-16">
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">
+        Electrical Load Grouping 1st Floor
+      </h2>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-10 rounded-full"></div>
+
+      <!-- overflow-x-auto ensures horizontal scroll on viewports below 768px — Requirement 9.6 -->
+      <div class="overflow-x-auto">
+        <table class="load-table">
+          <thead>
+            <tr>
+              <th>MCB Group</th>
+              <th>Load Description</th>
+              <th>Circuit Breaker (MCB)</th>
+              <th>Total Load (Watt/VA)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Group 1 -->
+            <tr>
+              <td>1</td>
+              <td>Lighting & Outdoor Wall Lamps — Garasi, Taman, Teras</td>
+              <td>1-Phase / 6 A</td>
+              <td>760 W / 894.1 VA</td>
+            </tr>
+            <!-- Group 2 -->
+            <tr>
+              <td>2</td>
+              <td>Indoor Lighting — R. Tamu, R. Keluarga, R. Makan, Dapur</td>
+              <td>1-Phase / 2 A</td>
+              <td>195.5 W / 230 VA</td>
+            </tr>
+            <!-- Group 3 -->
+            <tr>
+              <td>3</td>
+              <td>General Power Outlets — Stop Kontak Lantai 1</td>
+              <td>1-Phase / 4 A</td>
+              <td>400 W / 470.5 VA</td>
+            </tr>
+            <!-- Group 4 -->
+            <tr>
+              <td>4</td>
+              <td>Water Pump & Water Heater Dedicated Outlets</td>
+              <td>1-Phase / 2 A</td>
+              <td>230 W / 270.5 VA</td>
+            </tr>
+            <!-- Group 5 -->
+            <tr>
+              <td>5</td>
+              <td>Air Conditioning (AC)</td>
+              <td>1-Phase / 2 A</td>
+              <td>350 W / 411.7 VA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /overflow-x-auto -->
+
+    </section><!-- /load grouping table -->
+
+  </main><!-- /main content wrapper -->
+
+      <section class="max-w-5xl mx-auto px-4 pb-16">
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">
+        Electrical Load Grouping 2nd Floor
+      </h2>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-10 rounded-full"></div>
+
+      <!-- overflow-x-auto ensures horizontal scroll on viewports below 768px — Requirement 9.6 -->
+      <div class="overflow-x-auto">
+        <table class="load-table">
+          <thead>
+            <tr>
+              <th>MCB Group</th>
+              <th>Load Description</th>
+              <th>Circuit Breaker (MCB)</th>
+              <th>Total Load (Watt/VA)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Group 1 -->
+            <tr>
+              <td>6</td>
+              <td>Indoor Lighting & Balcony Lamps</td>
+              <td>1-Phase / 2 A</td>
+              <td>183 W / 215.2 VA</td>
+            </tr>
+            <!-- Group 2 -->
+            <tr>
+              <td>7</td>
+              <td>General Power Outlets</td>
+              <td>1-Phase / 4 A</td>
+              <td>400 W / 470.5 VA</td>
+            </tr>
+            <!-- Group 3 -->
+            <tr>
+              <td>8</td>
+              <td>Air Conditioning — AC Kamar Utama</td>
+              <td>1-Phase / 6 A</td>
+              <td>1.050 W / 1.235,2 VA</td>
+            </tr>
+            <!-- Group 4 -->
+            <tr>
+              <td>9</td>
+              <td>Air Conditioning — AC Kamar Anak</td>
+              <td>1-Phase / 6 A</td>
+              <td>525 W / 617.6 VA</td>
+            </tr>
+            <!-- Group 5 -->
+            <tr>
+              <td>10</td>
+              <td>Reserve / Spare Group — Cadangan</td>
+              <td>1-Phase / 4 A</td>
+              <td>350.5 W / 412.3 VA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div><!-- /overflow-x-auto -->
+
+    </section><!-- /load grouping table -->
+
+  </main><!-- /main content wrapper -->
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="bg-slate-900 text-slate-400 text-center text-sm py-6 px-4">
+    <p>&copy; 2026 Ni Putu Divia Maharani. All rights reserved.</p>
+  </footer>
+
+  <!-- Main JavaScript (defer ensures DOM is ready) -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>

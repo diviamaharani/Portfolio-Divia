@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Archive — Ni Putu Divia Maharani</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom design tokens and base resets -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body data-page="creative">
+
+  <!-- ============================================================
+       Navigation Bar (shared across all pages)
+       ============================================================ -->
+  <nav id="main-nav" class="fixed top-0 w-full z-50 bg-slate-900 shadow-md">
+
+    <!-- Inner container: brand name + desktop links + hamburger -->
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+
+      <!-- Brand / home link -->
+      <a href="index.html" class="text-white font-bold text-lg tracking-tight">
+        Divia Maharani
+      </a>
+
+      <!-- Desktop navigation links (hidden on mobile, flex row on md+) -->
+      <ul id="nav-links" class="hidden md:flex gap-6 text-sm font-medium list-none m-0 p-0">
+        <li>
+          <a href="index.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="home">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link text-slate-300 hover:text-amber-400 transition-colors duration-150"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+
+      <!-- Hamburger button (visible on mobile only, hidden on md+) -->
+      <button id="hamburger-btn"
+              class="md:hidden text-white p-2 rounded focus:outline-none focus:ring-2 focus:ring-amber-400"
+              aria-label="Toggle menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu">
+        <!-- Hamburger icon (three horizontal bars) -->
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="h-6 w-6"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor"
+             stroke-width="2"
+             aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div><!-- /inner container -->
+
+    <!-- Mobile dropdown menu (hidden by default; toggled by NavController.toggle()) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-4 pb-4">
+      <ul class="flex flex-col gap-3 text-sm font-medium list-none m-0 p-0 pt-2 border-t border-slate-700">
+        <li>
+          <a href="index.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="home">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="capstone.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="capstone">
+            Capstone Project
+          </a>
+        </li>
+        <li>
+          <a href="electrical.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="electrical">
+            Technical Work
+          </a>
+        </li>
+        <li>
+          <a href="leadership.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="leadership">
+            Activities
+          </a>
+        </li>
+        <li>
+          <a href="creative.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="creative">
+            Personal Project
+          </a>
+        </li>
+        <li>
+          <a href="gifts.html"
+             class="nav-link block text-slate-300 hover:text-amber-400 transition-colors duration-150 py-1"
+             data-page="gifts">
+            Creative Work
+          </a>
+        </li>
+      </ul>
+    </div><!-- /mobile-menu -->
+
+  </nav><!-- /#main-nav -->
+
+  <!-- ============================================================
+       Main content wrapper — pt-16 offsets the fixed nav height
+       ============================================================ -->
+  <main class="pt-16">
+
+    <!-- ============================================================
+         Page Header
+         ============================================================ -->
+    <section class="bg-slate-900 px-4 py-16 text-center">
+
+      <!-- Primary H1 heading — Requirement 11.1 -->
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
+        Creative Documentation: Managing @dipsandstitches
+      </h1>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-8 rounded-full"></div>
+
+      <!-- Framing badges — Requirement 11.2 -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="badge">Creative Execution</span>
+        <span class="badge">Visual Documentation</span>
+        <span class="badge">Content Archiving</span>
+      </div>
+
+    </section><!-- /page header -->
+
+    <!-- ============================================================
+         Gallery Grid — Requirement 11.3, 11.4, 11.5, 11.6
+         Responsive: 1 col mobile, 2 col sm, 3 col lg
+         ============================================================ -->
+    <section class="max-w-6xl mx-auto px-4 py-16">
+
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-4">
+        Crochet Project Gallery
+      </h2>
+
+      <!-- Amber accent divider -->
+      <div class="w-16 h-1 bg-amber-400 mx-auto mb-10 rounded-full"></div>
+
+      <!-- Gallery grid: 1 col mobile → 2 col sm → 3 col lg (defined in styles.css) -->
+      <div class="gallery-grid">
+
+        <!-- Cell 1 -->
+        <figure class="gallery-cell modal-trigger"
+                data-src="5.jpg"
+                data-caption="Crochet Project — Photocard Frame">
+          <img src="5.jpg"
+               alt="Crochet Project Photocard Frame"
+               class="w-full h-64 object-cover" />
+          <figcaption class="gallery-caption">
+            Crochet Project — Photocard Frame
+          </figcaption>
+        </figure>
+
+        <!-- Cell 2 -->
+        <figure class="gallery-cell modal-trigger"
+                data-src="6.png"
+                data-caption="Crochet Project — Poncho &amp; Butterfly Top">
+          <img src="6.png"
+               alt="Crochet Project Poncho &amp; Butterfly Top"
+               class="w-full h-64 object-cover" />
+          <figcaption class="gallery-caption">
+            Crochet Project — Poncho &amp; Butterfly Top
+          </figcaption>
+        </figure>
+
+        <!-- Cell 3 -->
+        <figure class="gallery-cell modal-trigger"
+                data-src="7.png"
+                data-caption="Crochet Project — Keychain">
+          <img src="7.png"
+               alt="Crochet project Keychain"
+               class="w-full h-64 object-cover" />
+          <figcaption class="gallery-caption">
+            Crochet Project — Keychain
+          </figcaption>
+        </figure>
+
+        <!-- Cell 4 -->
+        <figure class="gallery-cell modal-trigger"
+                data-src="8.png"
+                data-caption="Crochet Project — Pouch Orange">
+          <img src="10.png"
+               alt="Crochet project Pouch Orange"
+               class="w-full h-64 object-cover" />
+          <figcaption class="gallery-caption">
+            Crochet Project — Pouch Orange
+          </figcaption>
+        </figure>
+
+        <!-- Cell 5 -->
+        <figure class="gallery-cell modal-trigger"
+                data-src="9.png"
+                data-caption="Crochet Project — Mini Rose Bouquet">
+          <img src="9.png"
+               alt="Crochet Project Mini Rose Bouquet"
+               class="w-full h-64 object-cover" />
+          <figcaption class="gallery-caption">
+            Crochet Project — Mini Rose Bouquet
+          </figcaption>
+        </figure>
+
+        <!-- Cell 6 -->
+        <figure class="gallery-cell modal-trigger"
+                data-src="10.png"
+                data-caption="Crochet Project — Handbag">
+          <img src="8.png"
+               alt="Crochet Project Handbag"
+               class="w-full h-64 object-cover" />
+          <figcaption class="gallery-caption">
+            Crochet Project — Handbag
+          </figcaption>
+        </figure>
+
+      </div><!-- /gallery-grid -->
+
+    </section><!-- /gallery section -->
+
+  </main><!-- /main content wrapper -->
+
+  <!-- ============================================================
+       Footer
+       ============================================================ -->
+  <footer class="bg-slate-900 text-slate-400 text-center text-sm py-6 px-4">
+    <p>&copy; 2026 Ni Putu Divia Maharani. All rights reserved.</p>
+  </footer>
+
+  <!-- Main JavaScript (defer ensures DOM is ready) -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
